@@ -27,7 +27,7 @@
         </h1>
             <div id="accordionMenu">
                 <div class="userMenu">
-                    <p >{{ \Auth::user()->username }} さん</p>
+                    <p >{{ Auth::user()->username }} さん</p>
                     <div class="profileImage">
                         <img src="{{ asset('storage/images/' . Auth::user()->images) }}">
                     </div>

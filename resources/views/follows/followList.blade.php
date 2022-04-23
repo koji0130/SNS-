@@ -5,7 +5,8 @@
 <h2 class="list-title">Follow List</h2>
 <div class="icons">
   <div class="icon-list">
-    @foreach ($user as $list) @if ($list->id != Auth::user()->id)
+    @foreach ($user as $list)
+    @if ($list->id != Auth::user()->id)
     @if (auth()->user()->isFollowing($list->id))
     <div class="profileImage">
       <a href="otherUser/{{$list->id}}">
