@@ -1,4 +1,5 @@
 @extends('layouts.login')
+
 @section('content')
 
 <h2 class="list-title">Follow List</h2>
@@ -24,7 +25,9 @@
     <div class="image-posts">
       <div class="icon-group">
         <div class="profileImage">
-          <img src="{{ asset('storage/images/' . $list->user->images) }}">
+          <a href="otherUser/{{$list->user->id}}">
+            <img src="{{ asset('storage/images/' . $list->user->images) }}">
+          </a>
         </div>
       </div>
       <div class="post-group">
