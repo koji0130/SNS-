@@ -29,5 +29,9 @@
     <div class="button-group">
       <div class="timestamp">{{ $list->created_at }}</div>
     </div>
-  </div>@endif @endif @endforeach
-</div>@endsection
+  </div>
+  @endif
+  @endif
+  @endforeach
+</div>
+@endsection
