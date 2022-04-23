@@ -79,11 +79,12 @@ class RegisterController extends Controller
         if($request->isMethod('post')){
 
             // バリデーション機能（ユーザー新規登録）
-            // $request->validate([
-            //     'username' => 'required|string|max:12|min:2',
-            //     'mail' => 'required|string|email|max:40|min:5|unique:users',
-            //     'password' => 'required|string|alpha_num|max:20|min:8|unique:users|confirmed',
-            // ]);
+            $request->validate([
+                'username' => 'required|string|max:12|min:2',
+                'mail' => 'required|string|email|max:40|min:5|unique:users',
+                'password' => 'required|string|alpha_num|max:20|min:8|unique:users|confirmed',
+            ]);
+
             $data = $request->input();
 
             $this->create($data);
